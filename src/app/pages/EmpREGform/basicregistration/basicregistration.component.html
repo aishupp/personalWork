@@ -1,0 +1,59 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Employee Registration Form</h1>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <button class="btn btn-success btn-lg me-2">Basic</button>
+            <button class="btn btn-secondary btn-lg" routerLink="/contactReg">Contact</button>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <input type="text" (ngModelChange)="createFullName()" (ngModelChange)="createEmpNo()" class="form-control"
+                placeholder="First Name" [(ngModel)]="firstName">
+        </div>
+        <div class="col-md-3">
+            <input type="text" (ngModelChange)="createFullName()" class="form-control" placeholder="Middle Name"
+                [(ngModel)]="middleName">
+        </div>
+        <div class="col-md-3">
+            <input type="text" (ngModelChange)="createFullName()" class="form-control" placeholder="Last Name"
+                [(ngModel)]="lastName">
+        </div>
+
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <input type="text" (ngModelChange)="createFullName()" class="form-control" disabled placeholder="Full Name"
+                [(ngModel)]="fullname">
+        </div>
+        <div class="col-md-3">
+            <input type="text" [(ngModel)]="fullempNo" (ngModelChange)="createEmpNo()" class=" empNo form-control"
+                placeholder="Employee No">
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-5">
+            <select class="form-control" [(ngModel)]="selectedCity">
+                <option value="">Select City</option>
+                <option value="{{item}}" *ngFor="let item of cityArray">
+                    {{item}}
+                </option>
+
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" [disabled]="selectedCity !=='Other'" placeholder="Enter City">
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Pin Code">
+        </div>
+    </div>
+
+</div>

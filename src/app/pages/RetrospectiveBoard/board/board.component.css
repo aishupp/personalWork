@@ -1,0 +1,30 @@
+  .retro-card {
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+      min-height: 100px;
+  }
+
+  .went-well {
+      background-color: lightcoral;
+      /* Green */
+      color: white;
+      font-family: cursive;
+  }
+
+  .didnt-go-well {
+      background-color: lightskyblue;
+      /* Red */
+      color: white;
+  }
+  .start-doing {
+      background-color: lightgreen;
+      /* Blue */
+      color: white;
+  }
+
+  .action-items {
+      background-color:orange;
+      /* Blue */
+      color: white;
+  }

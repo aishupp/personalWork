@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Employee Registration Form</h1>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <button class="btn btn-success btn-lg me-2" routerLink="/basicReg">Basic</button>
+            <button class="btn btn-secondary btn-lg">Contact</button>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Mobile No">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Alt Mobile No">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Email">
+        </div>
+
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <input type="checkbox" [(ngModel)]="isactive"> Are you Working?
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder=" Enter Work Email" *ngIf="isactive">
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <select class="form-control" [(ngModel)]="selectedIdentityProof">
+                <option value="">Select Identity Proof</option>
+                <option value="{{item}}" *ngFor="let item of identityArray">
+                    {{item}}
+                </option>
+            </select>
+        </div>
+        <div class="col-md-3" (ngOnChange)="chooseIdentity()" *ngIf="isVisible">
+            <input type="text" *ngIf="selectedIdentityProof == 'Other'" class="form-control"
+                placeholder="Other Identity Type">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="">
+        </div>
+
+    </div>
+
+
+</div>
